@@ -2,7 +2,10 @@
 function showTemperature(response){
   let temperature =Math.round(response.data.main.temp);
 let city = response.data.name
-console.log('The temperature in ${city} is ${temperature}C');
+let message = 'It is &{temperature} degrees ${city}';
+let h1 = document.querySelector('h1');
+h1.innerHtml = message;
+
 
 
 }
